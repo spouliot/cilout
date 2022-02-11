@@ -6,8 +6,24 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackAsTool>true</PackAsTool>
-    <VersionPrefix>0.1.0</VersionPrefix>
+    <VersionPrefix>1.0.0</VersionPrefix>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <Copyright>Sebastien Pouliot</Copyright>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Authors>Sebastien Pouliot</Authors>
+    <PackageTags>tool;il;metadata</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>https://github.com/spouliot/cilout/blob/master/ChangeLog.md</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/spouliot/cilout</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)/README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Mono.Cecil" Version="0.11.4" />
