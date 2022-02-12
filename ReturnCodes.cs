@@ -1,6 +1,6 @@
 namespace CilOut;
 
-enum ReturnCodes {
+public enum ReturnCodes {
 	Success = 0,
 	Failure = 1,
 	// other positive values are command-specific

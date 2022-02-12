@@ -4,7 +4,7 @@ using Mono.Cecil;
 using Spectre.Console;
 using Spectre.Console.Cli;
 
-namespace CilOut;
+namespace CilOut.Commands;
 
 sealed class IsTrimmableCommand : Command<IsTrimmableCommand.Settings> {
 	public sealed class Settings : CommandSettings {
@@ -58,7 +58,9 @@ sealed class IsTrimmableCommand : Command<IsTrimmableCommand.Settings> {
 					return ReturnCodes.Success;
 			}
 			return ReturnCodes.Failure;
-		} catch {
+		} catch (Exception e) {
+			if (Environment.GetEnvironmentVariable ("V") is not null)
+				AnsiConsole.WriteException (e);
 			return ReturnCodes.CouldNotReadAssembly;
 		}
 	}
