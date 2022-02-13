@@ -4,6 +4,16 @@ are easy to read and diff.
 The tool and it's commands can be useful by themselves or when used in
 conjunction with [`appcompare`](https://github.com/spouliot/appcompare).
 
+## How to install
+
+Release packages are available from nuget. They can be installed from the
+command-line.
+
+$ dotnet tool install --global cilout
+
+To update or to re-install the latest version execute:
+
+$ dotnet tool update --global cilout
 
 ## USAGE:
 
