@@ -18,7 +18,8 @@ cilout [OPTIONS] <COMMAND>
 
 ## COMMANDS:
 
-* [`is-trimmable <assembly>`](https://github.com/spouliot/cilout/wiki/IsTrimmable)
+* [`assembly <assembly>`](https://github.com/spouliot/cilout/wiki/Assembly)
+    * [`is-trimmable`](https://github.com/spouliot/cilout/wiki/AssemblyIsTrimmable)
 
 ## RETURN CODES:
 
