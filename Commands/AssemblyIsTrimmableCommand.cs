@@ -6,12 +6,9 @@ using Spectre.Console.Cli;
 
 namespace CilOut.Commands;
 
-sealed class IsTrimmableCommand : Command<IsTrimmableCommand.Settings> {
-	public sealed class Settings : CommandSettings {
+public sealed class AssemblyIsTrimmableCommand : Command<AssemblyIsTrimmableCommand.Settings> {
 
-		[Description ("Assembly to verify for presence of `[[assembly: AssemblyMetadata (\"Trimmable\", \"true\")]]`")]
-		[CommandArgument (0, "<assembly>")]
-		public string? Assembly { get; init; }
+	public sealed class Settings : AssemblySettings {
 
 		[Description ("No visible output. Use return code.")]
 		[CommandOption ("-q|--quiet")]
