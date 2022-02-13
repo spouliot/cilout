@@ -20,6 +20,8 @@ cilout [OPTIONS] <COMMAND>
 
 * [`assembly <assembly>`](https://github.com/spouliot/cilout/wiki/Assembly)
     * [`is-trimmable`](https://github.com/spouliot/cilout/wiki/AssemblyIsTrimmable)
+    * [`references`](https://github.com/spouliot/cilout/wiki/AssemblyReferences)
+    * [`definitions`](https://github.com/spouliot/cilout/wiki/AssemblyDefinitions)
 
 ## RETURN CODES:
 
@@ -34,5 +36,5 @@ cilout [OPTIONS] <COMMAND>
 ```bash
 $ cilout -v
 
-0.1.0
+1.1.0
 ```
