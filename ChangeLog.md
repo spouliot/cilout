@@ -1,7 +1,13 @@
 # ChangeLog
 
+## 1.2.0 (unreleased)
+
+### Features
+- Add `appbundle` branch and [`is-trimmable`](https://github.com/spouliot/cilout/wiki/AppBundleIsTrimmable) command to detect any trimmable assembly inside the app bundle
+
 ## 1.1.0 (13 Feb 2022)
 
+### Features
 - Add `asssembly` branch and adjust [`is-trimmable`](https://github.com/spouliot/cilout/wiki/AssemblyIsTrimmable) command arguments
 - Add [`assembly <assembly> references`](https://github.com/spouliot/cilout/wiki/AssemblyReferences) command
 - Add [`assembly <assembly> definitions`](https://github.com/spouliot/cilout/wiki/AssemblyDefinitions) command

@@ -1,8 +1,5 @@
-using System.ComponentModel;
-using System.Diagnostics.CodeAnalysis;
 using Mono.Cecil;
 using Spectre.Console;
-using Spectre.Console.Cli;
 
 namespace CilOut.Commands;
 

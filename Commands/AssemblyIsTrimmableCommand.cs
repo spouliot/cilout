@@ -21,24 +21,29 @@ public sealed class AssemblyIsTrimmableCommand : Command<AssemblyIsTrimmableComm
 		var assembly = settings.Assembly!;
 		var trimmable = IsTrimmable (assembly);
 
-		if (!settings.Quiet) {
-			var asm = assembly.EscapeMarkup ();
-			switch (trimmable) {
-			case ReturnCodes.Success:
-				AnsiConsole.WriteLine ($"Assembly `{asm}` is trimmable.");
-				break;
-			case ReturnCodes.Failure:
-				AnsiConsole.MarkupLine ($"Assembly `{asm}` is [bold]not[/] trimmable.");
-				break;
-			case ReturnCodes.CouldNotReadAssembly:
-				AnsiConsole.MarkupLine ($"[red]Error: [/] Could not read assembly `{asm}`.");
-				break;
-			}
-		}
+		if (!settings.Quiet)
+			ShowResult (assembly, trimmable);
+
 		return (int) trimmable;
 	}
 
-	static ReturnCodes IsTrimmable (string assembly)
+	public static void ShowResult (string assemblyName, ReturnCodes trimmable)
+	{
+		var asm = assemblyName.EscapeMarkup ();
+		switch (trimmable) {
+		case ReturnCodes.Success:
+			AnsiConsole.WriteLine ($"Assembly `{asm}` is trimmable.");
+			break;
+		case ReturnCodes.Failure:
+			AnsiConsole.MarkupLine ($"Assembly `{asm}` is [bold]not[/] trimmable.");
+			break;
+		case ReturnCodes.CouldNotReadAssembly:
+			AnsiConsole.MarkupLine ($"[red]Error: [/] Could not read assembly `{asm}`.");
+			break;
+		}
+	}
+
+	public static ReturnCodes IsTrimmable (string assembly)
 	{
 		try {
 			AssemblyDefinition ad = AssemblyDefinition.ReadAssembly (assembly);

@@ -9,11 +9,15 @@ conjunction with [`appcompare`](https://github.com/spouliot/appcompare).
 Release packages are available from nuget. They can be installed from the
 command-line.
 
+```bash
 $ dotnet tool install --global cilout
+```
 
 To update or to re-install the latest version execute:
 
+```bash
 $ dotnet tool update --global cilout
+```
 
 ## USAGE:
 
@@ -32,6 +36,8 @@ cilout [OPTIONS] <COMMAND>
     * [`is-trimmable`](https://github.com/spouliot/cilout/wiki/AssemblyIsTrimmable)
     * [`references`](https://github.com/spouliot/cilout/wiki/AssemblyReferences)
     * [`definitions`](https://github.com/spouliot/cilout/wiki/AssemblyDefinitions)
+* [`appbundle <bundle>`](https://github.com/spouliot/cilout/wiki/AppBundle)
+    * [`is-trimmable`](https://github.com/spouliot/cilout/wiki/AppBundleIsTrimmable)
 
 ## RETURN CODES:
 
