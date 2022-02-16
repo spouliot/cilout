@@ -5,7 +5,7 @@ namespace CilOut.Commands;
 
 public class AppBundleSettings : CommandSettings {
 
-	[Description ("Assembly to analyze")]
+	[Description ("Application Bundle to analyze")]
 	[CommandArgument (0, "<appbundle>")]
 	public string? AppBundle { get; init; }
 }

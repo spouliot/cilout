@@ -52,5 +52,5 @@ cilout [OPTIONS] <COMMAND>
 ```bash
 $ cilout -v
 
-1.1.0
+1.2.0
 ```
