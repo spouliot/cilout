@@ -7,6 +7,8 @@ app.Configure (config => {
 		add.SetDescription ("Assembly to analyze");
 		add.AddCommand<AssemblyIsTrimmableCommand> ("is-trimmable")
 			.WithDescription ("Check for the presence of [[assembly: AssemblyMetadata (\"Trimmable\", \"true\")]] inside the specified assembly.");
+		add.AddCommand<AssemblyHasEntryPointCommand> ("has-entrypoint")
+			.WithDescription ("Check if the specified assembly has an entry point (e.g. `Main`) defined.");
 		add.AddCommand<AssemblyReferencesCommand>("references")
 			.WithAlias ("refs")
 			.WithDescription ("Show the metadata references, as a tree, inside the specified assembly.");
@@ -18,6 +20,8 @@ app.Configure (config => {
 		add.SetDescription ("Application Bundle to analyze");
 		add.AddCommand<AppBundleIsTrimmableCommand> ("is-trimmable")
 			.WithDescription ("Check for the presence of [[assembly: AssemblyMetadata (\"Trimmable\", \"true\")]] inside any assemblies of the appbundle.");
+		add.AddCommand<AppBundleHasEntryPointCommand> ("has-entrypoint")
+			.WithDescription ("Check if the specified application bundle has an assembly with an entry point (e.g. `Main`) defined.");
 	});
 });
 return app.Run (args);

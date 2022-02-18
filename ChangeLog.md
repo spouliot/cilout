@@ -4,6 +4,7 @@
 
 ### Features
 - Add `appbundle` branch and [`is-trimmable`](https://github.com/spouliot/cilout/wiki/AppBundleIsTrimmable) command to detect any trimmable assembly inside the app bundle
+- Add `has-entrypoint` command, to both `assembly` and `appbundle` branches, to detect if the assembly has an entry point
 
 ## 1.1.0 (13 Feb 2022)
 

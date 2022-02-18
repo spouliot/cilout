@@ -34,10 +34,12 @@ cilout [OPTIONS] <COMMAND>
 
 * [`assembly <assembly>`](https://github.com/spouliot/cilout/wiki/Assembly)
     * [`is-trimmable`](https://github.com/spouliot/cilout/wiki/AssemblyIsTrimmable)
+    * [`has-entrypoint`](https://github.com/spouliot/cilout/wiki/AssemblyHasEntryPoint)
     * [`references`](https://github.com/spouliot/cilout/wiki/AssemblyReferences)
     * [`definitions`](https://github.com/spouliot/cilout/wiki/AssemblyDefinitions)
 * [`appbundle <bundle>`](https://github.com/spouliot/cilout/wiki/AppBundle)
     * [`is-trimmable`](https://github.com/spouliot/cilout/wiki/AppBundleIsTrimmable)
+    * [`has-entrypoint`](https://github.com/spouliot/cilout/wiki/AppBundkeHasEntryPoint)
 
 ## RETURN CODES:
 
