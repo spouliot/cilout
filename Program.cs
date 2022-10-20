@@ -5,6 +5,8 @@ app.Configure (config => {
 	config.Settings.ApplicationName = "cilout";
 	config.AddBranch<AssemblySettings> ("assembly", add => {
 		add.SetDescription ("Assembly to analyze");
+		add.AddCommand<AssemblyFingerprintCommand> ("fingerprint")
+			.WithDescription ("Generate a fingerprint of the assembly to detect future changes.");
 		add.AddCommand<AssemblyIsTrimmableCommand> ("is-trimmable")
 			.WithDescription ("Check for the presence of [[assembly: AssemblyMetadata (\"Trimmable\", \"true\")]] inside the specified assembly.");
 		add.AddCommand<AssemblyHasEntryPointCommand> ("has-entrypoint")
@@ -18,6 +20,8 @@ app.Configure (config => {
 	});
 	config.AddBranch<AppBundleSettings> ("appbundle", add => {
 		add.SetDescription ("Application Bundle to analyze");
+		add.AddCommand<AppBundleFingerprintCommand> ("fingerprint")
+			.WithDescription ("Generate a fingerprint of the appbundle to detect future changes.");
 		add.AddCommand<AppBundleIsTrimmableCommand> ("is-trimmable")
 			.WithDescription ("Check for the presence of [[assembly: AssemblyMetadata (\"Trimmable\", \"true\")]] inside any assemblies of the appbundle.");
 		add.AddCommand<AppBundleHasEntryPointCommand> ("has-entrypoint")

@@ -1,10 +1,11 @@
 # ChangeLog
 
-## 1.2.0 (unreleased)
+## 1.2.0 (20 Oct 2022)
 
 ### Features
 - Add `appbundle` branch and [`is-trimmable`](https://github.com/spouliot/cilout/wiki/AppBundleIsTrimmable) command to detect any trimmable assembly inside the app bundle
 - Add `has-entrypoint` command, to both `assembly` and `appbundle` branches, to detect if the assembly has an entry point
+- Add `fingerprint` command, to both `assembly` and `appbundle` branches, to uniquely identify assemblies and appbundle using `Info.plist`
 
 ### Updates
 - Updated Spectre.Console to 0.45.0
